@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/dom4j:dom4j:1.6.1"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jaxen:jaxen:1.1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/com.thoughtworks.net.sf.jsonlibs_2.4.0"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commons-collections-3.2.2"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commons-compress-1.14"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commons-dbutils-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commons-io-2.5"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commons-logging-4.0.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/org.xbill.dns_2.1.7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commons-beanutils-1.8.3"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commons-lang-2"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jxl"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/org.apache.poi:poi:3.16"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/mysql-connector-java-8.0.7-dmr-bin"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commons-beanutils-1.7.0"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/mysql-connector-java-5.1.7-bin"/>
+	<classpathentry kind="output" path="out/production/Scene Divider"/>
+</classpath>
