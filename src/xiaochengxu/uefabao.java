@@ -66,9 +66,9 @@ public class uefabao {
                     int hour = c.get(Calendar.HOUR_OF_DAY);
                     int minute = c.get(Calendar.MINUTE);
                     int miao = c.get(Calendar.SECOND);
-                    int date2 = date + 10;
+                    int date2 = date + 5;
                     int month = mon + 1;
-                    System.out.println(year + "/" + month + "/" + date + " " + hour + ":" + minute + ":" + miao);
+                    System.out.println(year + "/" + month + "/" + date2 + " " + hour + ":" + minute + ":" + miao);
 
                     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
                     BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
@@ -105,7 +105,6 @@ public class uefabao {
                     post.addHeader("User-Agent", "Mozilla/5.0 (Linux; U; Android 6.0.1; zh-cn; SM-G9009W Build/MMB29M) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
 //                  post.addHeader("Charset","UTF-8");
                     post.addHeader("Accept-Encoding","gzip");
-                    System.out.print("sss");
                     ByteArrayEntity entity = new ByteArrayEntity(ct);
                     //ByteArrayEntity entity = new ByteArrayEntity(ct, ContentType.create("multipart/mixed").withParameters(new BasicNameValuePair("boundary","")));
                     post.setEntity(entity);
