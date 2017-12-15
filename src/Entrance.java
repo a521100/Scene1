@@ -1,5 +1,6 @@
 /**
- * Created by wxnc on 2017/9/1.
+ * 数据库读数据写入txt文件
+ * 生成文件
  */
 import dbmanager.DbManager;
 import org.apache.poi.ss.usermodel.Cell;

@@ -12,6 +12,7 @@ public class Dao {
         Statement st = null;
         ResultSet rs = null;
         conn = dbm.in();
+        String aaa;
         try {
             st = conn.createStatement();
             int ar=20000*y+1;
