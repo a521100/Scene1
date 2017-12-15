@@ -40,7 +40,7 @@ public class uefabao {
     public uefabao() {
 
         CookieStore cookieStore = null;
-        httpClient = HttpClientBuilder.create().setDefaultCookieStore(cookieStore).setProxy(new HttpHost("192.168.31.210",8888)).build();
+        httpClient = HttpClientBuilder.create().build();/*setDefaultCookieStore(cookieStore).setProxy(new HttpHost("192.168.31.210",8888)).开了fiddler之后想要监控时增加该条语句*/
         //fiddler可以看到程序发的包
 
     }
