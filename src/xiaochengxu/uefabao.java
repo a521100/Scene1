@@ -7,6 +7,7 @@ package xiaochengxu;
 import com.sun.corba.se.impl.orbutil.closure.Constant;
 import org.apache.commons.io.FileUtils;
 import org.apache.http.*;
+import org.apache.http.client.CookieStore;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -38,7 +39,9 @@ public class uefabao {
 
     public uefabao() {
 
-        httpClient = HttpClientBuilder.create().build();
+        CookieStore cookieStore = null;
+        httpClient = HttpClientBuilder.create().setDefaultCookieStore(cookieStore).setProxy(new HttpHost("192.168.31.210",8888)).build();
+        //fiddler可以看到程序发的包
 
     }
 
@@ -66,14 +69,14 @@ public class uefabao {
                     int hour = c.get(Calendar.HOUR_OF_DAY);
                     int minute = c.get(Calendar.MINUTE);
                     int miao = c.get(Calendar.SECOND);
-                    int date2 = date + 5;
+                    int date2 = date + 10;
                     int month = mon + 1;
                     System.out.println(year + "/" + month + "/" + date2 + " " + hour + ":" + minute + ":" + miao);
 
                     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
                     BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                     writer.write("userId=zzy122827_112&provinceId=112&param=%3C%3Fxml+version%3D%221.0%22+encoding%3D%22utf-8%22%3F%3E%0A%3Cparams%3E%0A++%3CAttachments%3E%0A++++%3Cattachmentsmodel%3E%0A++++++%3Cattachfileid%3E%3C%2Fattachfileid%3E%0A++++++%3Cfileext%3E%3C%2Ffileext%3E%0A++++++%3Cfilename%3E%3C%2Ffilename%3E%0A++++++%3Cfilepath%3E%3C%2Ffilepath%3E%0A++++++%3Cfileremark%2F%3E%0A++++++%3Cuploadtime%3E%3C%2Fuploadtime%3E%0A%3Cuploaduserid%3E%3C%2Fuploaduserid%3E%0A++++++%3Cuploadusername%3E%3C%2Fuploadusername%3E%0A++++%3C%2Fattachmentsmodel%3E%0A++%3C%2FAttachments%3E%0A%3Cgrablimit%3E3%3C%2Fgrablimit%3E%3Cgrabprovincelimit%3E1%3C%2Fgrabprovincelimit%3E%3Cprocessingtimelimit%3E15%3C%2Fprocessingtimelimit%3E%3Crequiredtime%3E");
-                    writer.write(year + "-" + month + "-" + date + "+" + date2 + "%3A" + minute + "%3A" + miao);//时间加15天
+                    writer.write(year + "-" + month + "-" + date2 + "+" + hour + "%3A" + minute + "%3A" + miao);//时间加15天
                     writer.write("%3C%2Frequiredtime%3E%3CsendUserId%3Ezzy122827_112%3C%2FsendUserId%3E%3Cmaxgrabnum%3E10%3C%2Fmaxgrabnum%3E%3Cprovincescope%3E112%3C%2Fprovincescope%3E%3Csendtime%3E");
                     writer.write(year + "-" + month + "-" + date + "+" + hour + "%3A" + minute + "%3A" + miao);//发单时间
                     writer.write("%3C%2Fsendtime%3E%3Cwfordercause%3E");
