@@ -16,12 +16,13 @@ public class train {
             InputStreamReader isr = new InputStreamReader(new FileInputStream("C:\\Apps\\read.csv"), "GB2312");
             BufferedReader reader = new BufferedReader(isr);
 //            BufferedReader reader = new BufferedReader(new FileReader());//换成你的文件名
-            File file = new File("C:\\Apps\\new4.csv");
-            fop = new FileOutputStream(file);
-            BufferedWriter bw = new BufferedWriter(new FileWriter(file,true));
+
+           // BufferedWriter bw = new BufferedWriter(new FileWriter(file,true));
             reader.readLine();//第一行信息，为标题信息，不用,如果需要，注释掉
             String line = null;
-            StringBuffer sbf = new StringBuffer();
+            File file = new File("C:\\Apps\\new5.csv");
+            fop = new FileOutputStream(file);
+          //  StringBuffer sbf = new StringBuffer();
             int i=1;
             while((line=reader.readLine())!=null){
                 String[] item = line.split(",");

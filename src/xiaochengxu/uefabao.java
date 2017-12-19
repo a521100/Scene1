@@ -51,7 +51,7 @@ public class uefabao {
             InputStreamReader isr = new InputStreamReader(new FileInputStream("C:\\Apps\\aa.csv"), "GB2312");
             BufferedReader reader = new BufferedReader(isr);
             String line = null;
-            int i=1;
+            int i=0;
             while ((line = reader.readLine()) != null) {
                 String[] item = line.split(",");
                 String first = item[0];  // 题目
@@ -124,6 +124,7 @@ public class uefabao {
                         System.out.println(EntityUtils.toString(closeableHttpResponse.getEntity()));
                         System.out.println(closeableHttpResponse.getEntity().toString());
                     }
+
                     Thread.sleep(40000);
                     closeableHttpResponse.close();
                 i++;
