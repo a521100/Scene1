@@ -73,6 +73,9 @@ public class uefabao {
                     int month = mon + 1;
                     System.out.println(year + "/" + month + "/" + date2 + " " + hour + ":" + minute + ":" + miao);
 
+                    /*
+                    * 需要发送的信息，放在包头中
+                    * */
                     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
                     BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                     writer.write("userId=zzy122827_112&provinceId=112&param=%3C%3Fxml+version%3D%221.0%22+encoding%3D%22utf-8%22%3F%3E%0A%3Cparams%3E%0A++%3CAttachments%3E%0A++++%3Cattachmentsmodel%3E%0A++++++%3Cattachfileid%3E%3C%2Fattachfileid%3E%0A++++++%3Cfileext%3E%3C%2Ffileext%3E%0A++++++%3Cfilename%3E%3C%2Ffilename%3E%0A++++++%3Cfilepath%3E%3C%2Ffilepath%3E%0A++++++%3Cfileremark%2F%3E%0A++++++%3Cuploadtime%3E%3C%2Fuploadtime%3E%0A%3Cuploaduserid%3E%3C%2Fuploaduserid%3E%0A++++++%3Cuploadusername%3E%3C%2Fuploadusername%3E%0A++++%3C%2Fattachmentsmodel%3E%0A++%3C%2FAttachments%3E%0A%3Cgrablimit%3E3%3C%2Fgrablimit%3E%3Cgrabprovincelimit%3E1%3C%2Fgrabprovincelimit%3E%3Cprocessingtimelimit%3E15%3C%2Fprocessingtimelimit%3E%3Crequiredtime%3E");
